@@ -1,0 +1,1021 @@
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+    
+    
+    <title>[#UPEX-3268] 素点運用かつ、「101点以上入力方法を[1：評価コードとして登録]」と設定している場合、画面上、採点が表示されない。</title>
+    <META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+
+
+
+
+    <BASE href="http://192.168.140.12/jira">
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#003366" vlink="#003366" alink="#660000">
+
+
+<style type="text/css">
+    *
+    {
+        border: 0;
+        padding: 0;
+    }
+
+    .tableBorder, .grid
+    {
+        background-color: #fff;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    h3.formtitle
+    {
+    }
+
+    .tableBorder td, .grid td
+    {
+        vertical-align: top;
+        padding: 2px;
+        border: 1px solid #cccccc;
+        border-collapse: collapse;
+    }
+
+.noPadding
+{
+    padding: 0px !important;
+}
+
+    h3 .subText
+    {
+        font-size: 60%;
+        font-weight: normal;
+    }
+
+    .tabLabel
+    {
+        font-weight: bold;
+        border-top: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        border-left: 1px solid #cccccc;
+        padding: 2px;
+        border-collapse: collapse;
+        display: inline;
+    }
+
+    td.blank
+    {
+        padding: 0;
+        margin: 0;
+    }
+
+    .blank td
+    {
+        border: none;
+    }
+
+
+    #descriptionArea
+    {
+        margin: 0px;
+        padding: 2px;
+        border: 1px solid #cccccc;
+    }
+
+</style>
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+
+        <tr>
+            <td bgcolor="f0f0f0" width="100%" colspan="2" valign="top">
+                <h3 class="formtitle">[UPEX-3268] &nbsp; <a href="/jira/browse/UPEX-3268">素点運用かつ、「101点以上入力方法を[1：評価コードとして登録]」と設定している場合、画面上、採点が表示されない。</a>
+                <div class="subText">
+                    作成日:
+                 16/12/22 
+                     &nbsp;更新日:
+                17/06/27
+                    
+                        
+                    
+                </div>
+                </h3>
+            </td>
+        </tr>
+        
+        <tr bgcolor="ffffff">
+            <td width="20%"><b>状況:</b></td>
+            <td width="80%">リリース待ち</td>
+        </tr>
+        <tr bgcolor="ffffff">
+            <td width="20%"><b>プロジェクト:</b></td>
+            <td width="80%"><a href="/jirasecure/BrowseProject.jspa?id=10043">UPEX不具合管理</a></td>
+        </tr>
+        
+        
+        <tr>
+                <td><b>コンポーネント:</b></td>
+                <td>
+                    
+                        
+
+    
+        <a title="教務 "
+           href="/jira/secure/IssueNavigator.jspa?component=10062&amp;sorter/field=priority&amp;mode=hide&amp;reset=true&amp;pid=10043&amp;sorter/order=ASC">教務</a>
+    
+
+
+
+                    
+                </td>
+        </tr>
+        
+        
+        <tr>
+                <td><b>影響バージョン:</b></td>
+                <td>
+                    
+                        
+
+
+    なし
+
+
+                    
+                </td>
+        </tr>
+        
+        
+        <tr>
+                <td><b>対応予定バージョン:</b></td>
+                <td>
+                    
+                        
+
+    
+        <a title="1.3.0.017 2017年7月末リリース"
+           href="/jira/secure/IssueNavigator.jspa?fixfor=10849&amp;sorter/field=priority&amp;mode=hide&amp;reset=true&amp;pid=10043&amp;sorter/order=ASC">1.3.0.017</a>
+        , 
+    
+        <a title="1.4.0.009 2017年7月リリース"
+           href="/jira/secure/IssueNavigator.jspa?fixfor=10850&amp;sorter/field=priority&amp;mode=hide&amp;reset=true&amp;pid=10043&amp;sorter/order=ASC">1.4.0.009</a>
+        , 
+    
+        <a title="1.5.0.002 2017年7月リリース"
+           href="/jira/secure/IssueNavigator.jspa?fixfor=10851&amp;sorter/field=priority&amp;mode=hide&amp;reset=true&amp;pid=10043&amp;sorter/order=ASC">1.5.0.002</a>
+    
+
+
+
+                    
+                </td>
+        </tr>
+        
+
+        
+        
+        
+    
+
+    </table>
+
+    <br />
+
+        
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+
+
+
+    <tr>
+        <td bgcolor="f0f0f0" valign="top" width="20%">
+            <b>タイプ:</b>
+        </td>
+        <td bgcolor="ffffff" valign="top" width="30%">
+            バグ
+        </td>
+
+        
+            <td bgcolor="f0f0f0">
+                <b>優先度:</b>
+            </td>
+            <td bgcolor="ffffff" valign="top" nowrap>
+                高
+            </td>
+        
+
+    </tr>
+    <tr>
+    
+        
+            <td bgcolor="f0f0f0" valign="top" width="20%">
+                <b>作成者:</b>
+            </td>
+            <td bgcolor="ffffff" valign="top" width="30%">
+                
+                    <a href="/jira/secure/ViewProfile.jspa?name=y.hamamoto">濵元　庸平</a>
+                
+                
+            </td>
+        
+
+        
+            <td bgcolor="f0f0f0" width="20%">
+                <b>担当者:</b>
+            </td>
+            <td bgcolor="ffffff" valign="top" nowrap width="30%">
+                
+                    <a href="/jira/secure/ViewProfile.jspa?name=y.hamamoto">濵元　庸平</a>
+                
+                
+            </td>
+        
+	</tr>
+	<tr>
+		<td bgcolor="f0f0f0" width="20%">
+			<b>解決策:</b>
+		</td>
+		<td bgcolor="ffffff" valign="top" width="30%" nowrap>
+			
+			
+				未解決
+			
+		</td>
+
+		<td bgcolor="f0f0f0" width="20%">
+			<b>投票数:</b>
+		</td>
+		<td bgcolor="ffffff" valign="top" width="30%" nowrap>
+            0
+		</td>
+	</tr>
+
+    
+	<tr>
+		<td bgcolor="f0f0f0">
+			<b>残存作業の見積時間:</b>
+		</td>
+		<td bgcolor="ffffff" valign="top" nowrap>
+			
+				未定
+			
+			
+		</td>
+
+		<td bgcolor="f0f0f0">
+			<b>作業時間:</b>
+		</td>
+		<td bgcolor="ffffff" valign="top" nowrap>
+			
+				未定
+			
+			
+		</td>
+	</tr>
+    <tr>
+        <td bgcolor="f0f0f0" width="20%">
+			<b>初期見積時間:</b>
+		</td>
+		<td bgcolor="ffffff" valign="top" width="80%" colspan="3" nowrap>
+			
+				未定
+			
+			
+		</td>
+    </tr>
+    
+
+    
+
+</table>
+
+
+    <br />
+
+        
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+            
+
+    
+    <tr>
+        <td bgcolor=f0f0f0 width=20% valign=top>
+            <b>添付ファイル:</b>
+        </td>
+        <td bgcolor="ffffff" valign="top">
+            
+            
+                1.
+                    <img src="/jira/images/icons/attach/excel.gif" height=16 width=16 border=0 vspace=1 align=absmiddle alt="Microsoft Excel"> 【UPEX-3268】コミットチェックリスト.xls
+            
+                2.
+                    <img src="/jira/images/icons/attach/file.gif" height=16 width=16 border=0 vspace=1 align=absmiddle alt="File"> 【UPEX-3268】ソース差異確認.xlsx
+            
+                3.
+                    <img src="/jira/images/icons/attach/file.gif" height=16 width=16 border=0 vspace=1 align=absmiddle alt="File"> 【UPEX-3268】テストケース作成チェックリスト.xlsx
+            
+                4.
+                    <img src="/jira/images/icons/attach/excel.gif" height=16 width=16 border=0 vspace=1 align=absmiddle alt="Microsoft Excel"> 【UPEX-3268】レビュー記録票.xls
+            
+                5.
+                    <img src="/jira/images/icons/attach/file.gif" height=16 width=16 border=0 vspace=1 align=absmiddle alt="File"> 【UPEX-3268】修正箇所.xlsx
+            
+                6.
+                    <img src="/jira/images/icons/attach/excel.gif" height=16 width=16 border=0 vspace=1 align=absmiddle alt="Microsoft Excel"> 【UPEX-3268】単体テスト仕様書.xls
+            
+                7.
+                    <img src="/jira/images/icons/attach/excel.gif" height=16 width=16 border=0 vspace=1 align=absmiddle alt="Microsoft Excel"> 【UPEX-3268】機能共通テスト仕様書.xls
+            
+                8.
+                    <img src="/jira/images/icons/attach/file.gif" height=16 width=16 border=0 vspace=1 align=absmiddle alt="File"> 【UPEX-3268】障害再現.xlsx
+            
+            <br>
+        </td>
+    </tr>
+
+
+    		
+            
+
+
+
+<tr>
+	<td bgcolor="f0f0f0" width="20%" valign="top">
+		<b>課題のリンク:</b>
+	</td>
+	<td bgcolor="ffffff" valign="top" class="noPadding">
+		<table cellpadding="0" cellspacing="0" border="0" width="100%" class="blank">
+            
+            
+                <tr>
+                    <td colspan="4" bgcolor="f0f0f0">
+                        <b>類似</b><br>
+                    </td>
+                </tr>
+                
+
+
+
+    
+    
+
+
+
+    
+    
+        
+        <tr>
+
+            <td>
+                以前に発生した類似課題
+            </td>
+            <td>
+                <a href="/jira/browse/GAKQA-11027">
+                    
+                    GAKQA-11027
+                </a>
+            </td>
+            <td>
+                UNIPA「採点登録」にて、「K」（=欠席）評価の学生の欄が空欄になってい...
+            </td>
+            <td>
+                完了、対応不要
+            </td>
+        </tr>            
+        
+    
+
+                
+
+
+
+
+    
+    
+
+
+    
+    
+
+            
+        </table>
+    </td>
+</tr>
+
+
+
+
+
+             
+            
+
+
+            
+            
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>課題分類:</b></td>
+                                <td bgcolor="ffffff" width="80%">  障害
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>障害発生バージョン:</b></td>
+                                <td bgcolor="ffffff" width="80%"><a href="/jira/secure/IssueNavigator.jspa?reset=true&mode=hide&sorter/order=ASC&sorter/field=priority&pid=10043&customfield_10055=10804" title="1.5.0.000 - V1.5バージョンアップ">1.5.0.000</a></td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>障害発生ホットフィックス番号:</b></td>
+                                <td bgcolor="ffffff" width="80%">  000
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>機能（UPEX):</b></td>
+                                <td bgcolor="ffffff" width="80%">    教務
+             - Kmc002	採点登録
+    </td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>緊急度:</b></td>
+                                <td bgcolor="ffffff" width="80%">  期限なし
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>発生契機:</b></td>
+                                <td bgcolor="ffffff" width="80%">  本番
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>発見者区分:</b></td>
+                                <td bgcolor="ffffff" width="80%">  顧客
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>大学名(又は環境名):</b></td>
+                                <td bgcolor="ffffff" width="80%">      甲南大学、近畿大学
+  </td>
+                            </tr>
+                        
+                    
+                
+            
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>原因分類:</b></td>
+                                <td bgcolor="ffffff" width="80%">  製造不良（表示不正）
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>要因・原因:</b></td>
+                                <td bgcolor="ffffff" width="80%">  処理考慮漏れ
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>バグ発生原因:</b></td>
+                                <td bgcolor="ffffff" width="80%">  データパターンの考慮漏れ
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>判定所見:</b></td>
+                                <td bgcolor="ffffff" width="80%">              <div id="customfield_10039-open">
+            <div style="float:right;">
+                <a href="" onClick="toggleDivsWithCookie('customfield_10039-closed', 'customfield_10039-open'); return false;" class="smallgrey">&laquo; 非表示</a>
+            </div>
+            <div style="">
+                素点と評価コードの考慮漏れ。<br/>
+『採点登録』にて、素点運用時に評価コードを入力した場合、画面上は評価コードが表示されているが、内部では評価コードに対応する素点が登録されている。<br/>
+また『採点情報出力』においても、「素点運用かつ101点以上が登録されている場合」、CSVには素点ではなく評価コードを出力している。<br/>
+<br/>
+GAKUENへ取り込み、UNIPAで採点情報を削除後、UPBATCHにてUNIPAへ連携すると、採点データが「素点」が消え、「評価コード」のみに変わる。<br/>
+結果、画面上、空欄で表示されてしまう。<br/>
+<br/>
+対応として、現状は評価コードに置き換えた場合に素点を空欄にしている処理をなくし、素点とそれ�����対応する評価コードのどちらも出力するよう改修する。<br/>
+Kmc00301AAct#listCsv01、Kmc00301AAct#listCsv02を修正。<br/>
+<br/>
+---追加対応<br/>
+採点登録画面においても、素点運用時に評価コードのみ登録されていても、その値を画面に表示するよう改修する。<br/>
+表示の優先順位として「素点⇒評価コード」とする。どちらも空欄であれば画面上も空欄とする。
+            </div>
+        </div>
+        <div id="customfield_10039-closed" style="display: none;">
+            <div style="float:right;">
+                <a href="" onClick="toggleDivsWithCookie('customfield_10039-open', 'customfield_10039-closed'); return false;" class="smallgrey">表示 &raquo;</a>
+            </div>
+            <div style="height: 1.2em; overflow: hidden;">
+                                    素点と評価コードの考慮漏れ。
+『採点登録』にて、素点運用時に評価コードを入力した場合、画面上は評価コードが表示されているが、内部では評価コードに対応する素点が登録されている。
+また『採点情報出力』においても、「素点運用かつ101点以上が登録されている場合」、CSVには素点ではなく評価コードを出力している。
+
+GAKUENへ取り込み、UNIPAで採点情報を削除後、UPBATCHにてUNIPAへ連携すると、採点データが「素点」が消え、「評価コード」のみに変わる。
+結果、画面上、空欄で表示されてしまう。
+
+対応として、現状は評価コードに置き換えた場合に素点を空欄にしている処理をなくし、素点とそれ�����対応する評価コードのどちらも出力するよう改修する。
+Kmc00301AAct#listCsv01、Kmc00301AAct#listCsv02を修正。
+
+---追加対応
+採点登録画面においても、素点運用時に評価コードのみ登録されていても、その値を画面に表示するよう改修する。
+表示の優先順位として「素点⇒評価コード」とする。どちらも空欄であれば画面上も空欄とする。
+                            </div>
+        </div>
+        <script language="JavaScript" type="text/javascript">
+        <!--
+            restoreDivFromCookie('customfield_10039-open', 'jira.viewissue.cong.cookie', '1');
+            restoreDivFromCookie('customfield_10039-closed', 'jira.viewissue.cong.cookie', '0');
+        //-->
+        </script>
+      </td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>見積工数(H):</b></td>
+                                <td bgcolor="ffffff" width="80%">              <div id="customfield_10360-open">
+            <div style="float:right;">
+                <a href="" onClick="toggleDivsWithCookie('customfield_10360-closed', 'customfield_10360-open'); return false;" class="smallgrey">&laquo; 非表示</a>
+            </div>
+            <div style="">
+                機能理解：8.0h<br/>
+設計書：3.0h<br/>
+製造：12.0h<br/>
+テストケース作成：6.0h<br/>
+テスト：6.0h<br/>
+受入：2.0h<br/>
+合計：37.0h
+            </div>
+        </div>
+        <div id="customfield_10360-closed" style="display: none;">
+            <div style="float:right;">
+                <a href="" onClick="toggleDivsWithCookie('customfield_10360-open', 'customfield_10360-closed'); return false;" class="smallgrey">表示 &raquo;</a>
+            </div>
+            <div style="height: 1.2em; overflow: hidden;">
+                                    機能理解：8.0h
+設計書：3.0h
+製造：12.0h
+テストケース作成：6.0h
+テスト：6.0h
+受入：2.0h
+合計：37.0h
+                            </div>
+        </div>
+        <script language="JavaScript" type="text/javascript">
+        <!--
+            restoreDivFromCookie('customfield_10360-open', 'jira.viewissue.cong.cookie', '1');
+            restoreDivFromCookie('customfield_10360-closed', 'jira.viewissue.cong.cookie', '0');
+        //-->
+        </script>
+      </td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>バージョン差異:</b></td>
+                                <td bgcolor="ffffff" width="80%">  未確認
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>デグレード/初期障害:</b></td>
+                                <td bgcolor="ffffff" width="80%">          開発初期障害    </td>
+                            </tr>
+                        
+                    
+                
+            
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>対応完了日:</b></td>
+                                <td bgcolor="ffffff" width="80%">          17/01/24
+    </td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>機能ID:</b></td>
+                                <td bgcolor="ffffff" width="80%">              Kmc002,Kmc003
+      </td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>対応者:</b></td>
+                                <td bgcolor="ffffff" width="80%">  <a href="/jira/secure/ViewProfile.jspa?name=y.takaura">髙浦　優輔</a>
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>対応内容:</b></td>
+                                <td bgcolor="ffffff" width="80%">              <div id="customfield_10077-open">
+            <div style="float:right;">
+                <a href="" onClick="toggleDivsWithCookie('customfield_10077-closed', 'customfield_10077-open'); return false;" class="smallgrey">&laquo; 非表示</a>
+            </div>
+            <div style="">
+                【対応内容】<br/>
+・[採点登録]画面で評価点がなく、評価コードのみ存在する場合、<br/>
+評価コードが「素点」に入力された状態で初期表示されるよう対応しました。<br/>
+・採点情報出力にて、「101点以上入力方法を[1:評価コードとして登録]」と設定しており、<br/>
+素点が101点以上である場合、評価コードもcsvファイルに出力するよう対応しました。<br/>
+<br/>
+【修正対象リソース】<br/>
+JavaSource/com/jast/gakuen/up/co/service/SaitenService.java(V1.5=V1.4=V1.3)<br/>
+JavaSource/com/jast/gakuen/up/km/action/Kmc00202AAct.java(V1.5=V1.4=V1.3)<br/>
+JavaSource/com/jast/gakuen/up/km/action/Kmc00301AAct.java(V1.5=V1.4=V1.3)<br/>
+<br/>
+【対応バージョン】<br/>
+Ver1.5(159703)<br/>
+Ver1.4(159704)<br/>
+Ver1.3(159705)<br/>
+
+            </div>
+        </div>
+        <div id="customfield_10077-closed" style="display: none;">
+            <div style="float:right;">
+                <a href="" onClick="toggleDivsWithCookie('customfield_10077-open', 'customfield_10077-closed'); return false;" class="smallgrey">表示 &raquo;</a>
+            </div>
+            <div style="height: 1.2em; overflow: hidden;">
+                                    【対応内容】
+・[採点登録]画面で評価点がなく、評価コードのみ存在する場合、
+評価コードが「素点」に入力された状態で初期表示されるよう対応しました。
+・採点情報出力にて、「101点以上入力方法を[1:評価コードとして登録]」と設定しており、
+素点が101点以上である場合、評価コードもcsvファイルに出力するよう対応しました。
+
+【修正対象リソース】
+JavaSource/com/jast/gakuen/up/co/service/SaitenService.java(V1.5=V1.4=V1.3)
+JavaSource/com/jast/gakuen/up/km/action/Kmc00202AAct.java(V1.5=V1.4=V1.3)
+JavaSource/com/jast/gakuen/up/km/action/Kmc00301AAct.java(V1.5=V1.4=V1.3)
+
+【対応バージョン】
+Ver1.5(159703)
+Ver1.4(159704)
+Ver1.3(159705)
+
+                            </div>
+        </div>
+        <script language="JavaScript" type="text/javascript">
+        <!--
+            restoreDivFromCookie('customfield_10077-open', 'jira.viewissue.cong.cookie', '1');
+            restoreDivFromCookie('customfield_10077-closed', 'jira.viewissue.cong.cookie', '0');
+        //-->
+        </script>
+      </td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>実績工数（H):</b></td>
+                                <td bgcolor="ffffff" width="80%">    45
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>修正ドキュメント:</b></td>
+                                <td bgcolor="ffffff" width="80%">          外部設計書    </td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>リビジョン番号:</b></td>
+                                <td bgcolor="ffffff" width="80%">    159,705
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>PG完了チェックリスト:</b></td>
+                                <td bgcolor="ffffff" width="80%">          影響範囲の確認、対策,          テスト仕様書作成、テスト実施,          テスト仕様書の添付,          対応内容の記入,          懸案事項の整理、対策    </td>
+                            </tr>
+                        
+                    
+                
+            
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>受入者:</b></td>
+                                <td bgcolor="ffffff" width="80%">  <a href="/jira/secure/ViewProfile.jspa?name=y.hamamoto">濵元　庸平</a>
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>受入確認日付:</b></td>
+                                <td bgcolor="ffffff" width="80%">          17/01/30
+    </td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>受入状況:</b></td>
+                                <td bgcolor="ffffff" width="80%">  済
+</td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>受入工数（Ｈ）:</b></td>
+                                <td bgcolor="ffffff" width="80%">    2
+</td>
+                            </tr>
+                        
+                    
+                
+            
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>リリースバージョン:</b></td>
+                                <td bgcolor="ffffff" width="80%"><a href="/jira/secure/IssueNavigator.jspa?reset=true&mode=hide&sorter/order=ASC&sorter/field=priority&pid=10043&customfield_10035=10851" title="1.5.0.002 - 2017年7月リリース">1.5.0.002</a>, <a href="/jira/secure/IssueNavigator.jspa?reset=true&mode=hide&sorter/order=ASC&sorter/field=priority&pid=10043&customfield_10035=10850" title="1.4.0.009 - 2017年7月リリース">1.4.0.009</a> and <a href="/jira/secure/IssueNavigator.jspa?reset=true&mode=hide&sorter/order=ASC&sorter/field=priority&pid=10043&customfield_10035=10849" title="1.3.0.017 - 2017年7月末リリース">1.3.0.017</a></td>
+                            </tr>
+                        
+                    
+                
+                    
+                        
+                        
+                        
+                            <tr>
+                                <td bgcolor="f0f0f0" width="20%" valign="top"><b>Readme記述:</b></td>
+                                <td bgcolor="ffffff" width="80%">              <div id="customfield_10059-open">
+            <div style="float:right;">
+                <a href="" onClick="toggleDivsWithCookie('customfield_10059-closed', 'customfield_10059-open'); return false;" class="smallgrey">&laquo; 非表示</a>
+            </div>
+            <div style="">
+                ■Kmc002 [採点登録]<br/>
+・採点方法が【素点】かつ、「評価点」が101点以上の「評価」を「評価コード」で登録している場合、「素点」に「評価コード」が表示されるよう対応しました。<br/>
+<br/>
+■Kmc003 [採点情報出力] <br/>
+・採点方法が【素点】かつ、「評価点」が101点以上の「評価」を「評価コード」で登録している場合、ＣＳＶファイルに「評価点」と「評価コード」が出力されるよう対応しました。
+            </div>
+        </div>
+        <div id="customfield_10059-closed" style="display: none;">
+            <div style="float:right;">
+                <a href="" onClick="toggleDivsWithCookie('customfield_10059-open', 'customfield_10059-closed'); return false;" class="smallgrey">表示 &raquo;</a>
+            </div>
+            <div style="height: 1.2em; overflow: hidden;">
+                                    ■Kmc002 [採点登録]
+・採点方法が【素点】かつ、「評価点」が101点以上の「評価」を「評価コード」で登録している場合、「素点」に「評価コード」が表示されるよう対応しました。
+
+■Kmc003 [採点情報出力] 
+・採点方法が【素点】かつ、「評価点」が101点以上の「評価」を「評価コード」で登録している場合、ＣＳＶファイルに「評価点」と「評価コード」が出力されるよう対応しました。
+                            </div>
+        </div>
+        <script language="JavaScript" type="text/javascript">
+        <!--
+            restoreDivFromCookie('customfield_10059-open', 'jira.viewissue.cong.cookie', '1');
+            restoreDivFromCookie('customfield_10059-closed', 'jira.viewissue.cong.cookie', '0');
+        //-->
+        </script>
+      </td>
+                            </tr>
+                        
+                    
+                
+            
+        </table>
+
+        
+
+
+
+
+<br>
+
+<table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+	<td bgcolor="bbbbbb" width="1%" nowrap align="center">
+			&nbsp;<font color="ffffff"><b>説明</b></font>&nbsp;
+	</td>
+	<td>&nbsp;</td>
+</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+	<td id="descriptionArea">
+        「パラメータ管理」の[分類]：採点登録にある、[設定項目]：101点以上入力方法を[1：評価コードとして登録]と設定する。<br/>
+<br/>
+1)　UNIPA「採点登録」で素点欄に&quot;K&quot;と入力。<br/>
+　　　⇒テーブル上では、評価点に&quot;K&quot;に紐付く素点が登録された状態。<br/>
+2)　採点情報を出力し、GAKUENに一括登録。<br/>
+3)　GAKUEN「採点登録」の[評価欄]には&quot;K&quot;と登録される。<br/>
+　　　※[評価点]は空欄の状態。<br/>
+4)　採点情報一括削除を実行する。<br/>
+5)　履修採点のバッチを実行する。<br/>
+6)　GAKUENでは[評価点]は空欄の状態。<br/>
+　　　⇒UNIPAも素点欄には&quot;K&quot;と入力してあるが、評価点ではないため、素点欄は空欄で登録される。<br/>
+　　　⇒ただし、テーブル上では、評価コードに&quot;K&quot;が登録されている状態。
+        <br>
+	</td>
+</tr>
+</table>
+
+
+
+
+        
+            
+
+
+
+<br>
+
+<table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+	<td bgcolor="bbbbbb" width="1%" nowrap align="center">
+			&nbsp;<font color="ffffff"><b>コメント</b></font>&nbsp;
+	</td>
+	<td>&nbsp;</td>
+</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="grid" style="margin: 0;">
+    
+	<tr><td bgcolor="f0f0f0">
+        コメント作成者    
+        
+			<a href="/jira/secure/ViewProfile.jspa?name=y.takaura">髙浦　優輔</a>
+		
+		
+
+		<font size="-2">
+		[
+			<font color="336699">2017/01/24 08:27 午後</font>
+
+			
+		]
+
+            
+        </font>
+
+	</td></tr>
+	<tr><td bgcolor="ffffff">
+        対応を完了いたしましたので、受け入れよろしくお願いします。
+	</td></tr>
+    
+</table>
+
+
+
+        
+
+</body>           
+
+</html>
